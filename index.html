@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <div class="main">
+
+
+    <div class="card">
+      <div class="upper">
+            <div class="icon">
+              <img src="/images/card-logo.svg" alt="card-logo">
+            </div>
+            <div class="number">
+              <h3 id = "cardNumber">0000 0000 0000 0000</h3>
+            </div>
+            <div class="name">
+              <p id = "cardName">Jane Appleseed</p>
+              <p id = "my">00/00</p>
+            </div>
+      </div>
+      <div class="lower">
+        <p id="cardCvc">000</p>
+      </div>
+    </div>
+
+    <div id = "infomation"class="info" >
+      <div class="container">
+        <h2>Cardholder Name</h2>
+        <input id = "name"type="text" placeholder="e.g. Jane Appleseed">
+        <p id = "nameWarning" class="red"></p>
+      </div> 
+      <div class="container">
+        <h2>Card Number</h2>
+        <input type="text" placeholder="e.g. 1234 5678 9123 0000" id = "number">
+        <p id = "numWarning" class="red"></p>
+      </div>
+      <div class="container Exp">
+        <div class="left">
+          <h2>Exp. Date (MM/YY)</h2>
+          <input id = "month" type="tel" pattern="[0-9]{2}" required placeholder="MM">
+          <input id = "year"type="tel" pattern="[0-9]{2}" required  placeholder="YY">
+          <p id = "dateWarning" class="red"></p>
+        </div>
+        <div class="right">
+          <h2>CVC</h2>
+          <input id = "cvc"type="text" placeholder="e.g. 123">
+          <p id = "cvcWarning" class="red"></p>
+        </div>
+      </div>
+      <button id = "confirm" class="submit">
+        Confirm
+      </button>
+    </div>
+
+    <!-- Completed state start -->
+
+    <div id = "thank"class="thankstate" >
+      <div class="complete">
+        <img src="/images/icon-complete.svg" alt="complete">
+      </div>
+      <h1>Thank you!</h1>
+      <p>We've added your card details</p>
+      <button class="submit">Continue</button>
+    </div>
+
+  </div>
+
+  <script src="/js/script.js"></script>
+
+</body>
+</html>

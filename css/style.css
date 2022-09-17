@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+/* font-family: 'Space Grotesk', sans-serif; */
+
+:root{
+    --Blue:hsl(249, 99%, 64%);
+    --Purple:hsl(278, 94%, 30%);
+    --Red:hsl(0, 100%, 66%);
+    --White: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Tran-light-grayish : hsl(279, 6%, 55%,0.3);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    /* outline: 1px solid salmon; */
+}
+
+body {
+    background-image: url(/images/bg-main-desktop.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 30% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--White);
+    min-height: 100vh;
+}
+
+.main {
+    width: 80rem;
+    height: 35rem;
+    display: flex;
+}
+
+.card { 
+    width: 50%;
+    padding: 1rem;
+}
+
+.card > div {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 2rem;
+    width: 500px;
+    height: 300px;
+    color: var(--White); 
+    box-shadow: 15px 15px 25px var(--Tran-light-grayish);
+    border-radius: 15px;
+}
+
+.upper {
+    background-image: url(/images/bg-card-front.png);
+    margin-bottom: 2rem;
+}
+
+.icon{
+    margin-bottom: 5rem;
+}
+
+.number > h3 {
+    margin-left: .2rem;
+    letter-spacing: .2rem;
+    display: flex;
+    font-size: 28px;
+    margin-bottom: 2rem;
+}
+
+.name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name p{
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+.lower {
+    margin-left: 6rem;
+    background-image: url(/images/bg-card-back.png);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.lower p{
+    font-size: 16px;
+    margin-right: 2rem;
+    letter-spacing: .1rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 30rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.container h2 {
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.container input {
+    width: 100%;
+    padding: .5rem;
+    border-radius: 10px;
+    border-color:var(--Light-grayish-violet); 
+    border-style: solid;
+    color: var(--Very-dark-violet);
+    margin-left: 0.2rem;
+    cursor: pointer;
+}
+
+.Exp {
+    display: flex;
+}
+
+.left {
+    width: 50%;
+}
+
+.left > input {
+    width: 30%;
+}
+
+
+.right {
+    width: 50%;
+}
+
+.right > input {
+    width: 100%;
+}
+
+.submit {
+    margin-top: 2rem;
+    letter-spacing: 0.1rem;
+    width: 30rem;
+    height: 3.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--Very-dark-violet);
+    color:var(--White);
+    cursor: pointer;
+}
+
+/*for warning*/
+
+.red { 
+    color: var(--Red);
+    font-size: 14px;
+    margin: .5rem 0;
+    letter-spacing: normal;
+}
+
+/* adjust input */
+::-webkit-input-placeholder {
+    color: var(--Light-grayish-violet);
+}
+
+input:focus {
+    outline: none;
+    background: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(to right, var(--Blue), var(--Purple)) border-box;
+    border: 2px solid transparent;
+}
+
+ 
+/* Complete state */
+
+.thankstate {
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.complete {
+    margin-bottom: 1rem;
+}
+
+.thankstate > h1 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-bottom: 1rem;
+}
+
+.thankstate > p {
+    color:var(--Dark-grayish-violet);
+    margin-bottom: 2rem;
+}
+
+@media only screen and (max-width : 960px){
+    body {
+        background-image: url(/images/bg-main-mobile.png);
+        background-position: top;
+        background-size: 100% 40%;
+    }
+
+    .main {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .card {
+        height: 500px;
+        width: 100%;
+        position: relative;
+    }
+
+    .upper {
+        bottom: -1.5rem;
+        z-index: 1;
+        position: absolute;
+    }
+
+    .lower {
+        position: absolute;
+    }
+
+    .info {
+        width: 100%;
+        height: auto;
+    }
+}
